@@ -1,52 +1,9 @@
-Sure! Below is a minimal working example of a simple web application that displays "Hello World". This example uses HTML, CSS, and JavaScript, and can be run in any modern web browser.
+import tkinter as tk
 
-### Step 1: Create the HTML file
+app = tk.Tk()
+app.title("Hello World App")
 
-Create a file named `index.html` and add the following code:
+label = tk.Label(app, text="Hello World")
+label.pack()
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World App</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            color: #333;
-        }
-    </style>
-</head>
-<body>
-    <h1 id="greeting">Hello World</h1>
-    <script>
-        // You can add more JavaScript here if needed
-    </script>
-</body>
-</html>
-```
-
-### Step 2: Open the HTML file
-
-1. Save the `index.html` file.
-2. Open the file in a web browser (e.g., Chrome, Firefox, Safari).
-
-### Result
-
-You should see a webpage that displays "Hello World" in the center of the screen.
-
-### Explanation
-
-- **HTML Structure**: The `<html>`, `<head>`, and `<body>` tags define the structure of the webpage.
-- **CSS Styles**: The `<style>` section contains basic styles to center the text and set the background color.
-- **JavaScript**: The `<script>` section is included for any future JavaScript functionality, though it's not used in this minimal example.
-
-This is a very basic app, but it serves the purpose of displaying "Hello World". You can expand upon it by adding more features or styling as needed!
+app.mainloop()
