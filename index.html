@@ -1,7 +1,32 @@
-<html><body><h1>Failed to generate app</h1><pre><html>
-<head><title>404 Not Found</title></head>
+```python
+{
+    "index.html": """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World App</title>
+</head>
 <body>
-<center><h1>404 Not Found</h1></center>
-<hr><center>nginx</center>
+    <h1>Hello World</h1>
 </body>
-</html></pre></body></html>
+</html>
+""",
+    "app.py": """
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+""",
+    "requirements.txt": """
+Flask==2.0.1
+"""
+}
+```
